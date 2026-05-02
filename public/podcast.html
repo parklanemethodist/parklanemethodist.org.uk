@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast | Park Lane Methodist Church</title>
+    <meta name="description" content="Listen to the latest sermons and discussions from Park Lane Methodist Church on our Hope & Anchor podcast.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .podcast-card {
+            display: flex;
+            gap: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .podcast-card:hover {
+            transform: scale(1.01);
+            box-shadow: var(--shadow-medium);
+        }
+        .podcast-img {
+            width: 200px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+        .podcast-content {
+            padding: 2rem;
+            flex: 1;
+        }
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                PLMC Wembley
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="podcast.html" class="active">Podcast</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="hero" style="padding: 4rem 0;">
+        <div class="container">
+            <h1>Hope & Anchor</h1>
+            <p>Our weekly podcast bringing biblical wisdom and community stories to your ears.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="padding: 4rem 1.5rem;">
+        
+        <div class="section-title">
+            <h2>Latest Episodes</h2>
+        </div>
+
+        <div class="podcast-list">
+            
+            <!-- Episode 1 -->
+            <div class="podcast-card">
+                <div class="podcast-img">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <div class="podcast-content">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">April 12, 2026 | Season 4, Ep 12</span>
+                    <h3 style="margin: 0.5rem 0;">Worship Service - Second Sunday of Easter</h3>
+                    <p>Relive our Sunday morning service focusing on the "Greater than Solomon" message and our seasonal journey.</p>
+                    <a href="#" class="play-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Listen Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="podcast-card">
+                <div class="podcast-img">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <div class="podcast-content">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">April 5, 2026 | Season 4, Ep 11</span>
+                    <h3 style="margin: 0.5rem 0;">The Resurrection Promise</h3>
+                    <p>A special Easter Sunday episode exploring the transformative power of the resurrection in our daily lives.</p>
+                    <a href="#" class="play-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Listen Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="podcast-card">
+                <div class="podcast-img">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                </div>
+                <div class="podcast-content">
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">March 29, 2026 | Season 4, Ep 10</span>
+                    <h3 style="margin: 0.5rem 0;">Palm Sunday: The Humble King</h3>
+                    <p>Entry into Jerusalem and what it means for us today. A deep dive into the significance of Holy Week.</p>
+                    <a href="#" class="play-btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                        Listen Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem;">
+            <p>Also available on:</p>
+            <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem;">
+                <a href="#" style="color: var(--primary); font-weight: 600;">Apple Podcasts</a>
+                <a href="#" style="color: var(--primary); font-weight: 600;">Spotify</a>
+                <a href="#" style="color: var(--primary); font-weight: 600;">YouTube</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Park Lane Methodist Church</h3>
+                    <p>Park Lane, Wembley<br>Middlesex, HA9 7SG</p>
+                </div>
+                <div>
+                    <h3>Worship</h3>
+                    <p>Sunday Service: 10:30am</p>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p>Enquiries via our contact form or email:</p>
+                    <p><a href="mailto:henrysar@gmail.com" style="color: var(--primary-light); font-weight: 500;">henrysar@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Park Lane Methodist Church. Rebuilt with modern standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
