@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('PLMC Website Initialized');
+    console.log('Wembley Park Lane Methodist Church Website Initialized');
 
     // 1. Mobile Menu Toggle (To be implemented with a burger icon)
     const initMobileMenu = () => {
