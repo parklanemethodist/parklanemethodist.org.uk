@@ -23,6 +23,10 @@
                         gold: '#d4af37',
                         'gold-light': '#f3e5ab'
                     },
+                    screens: {
+                        'xs': '475px',
+                        ...tailwind.config.theme.screens,
+                    },
                     fontFamily: {
                         serif: ['"Playfair Display"', 'serif'],
                         sans: ['Inter', 'sans-serif'],
@@ -64,21 +68,25 @@
 <body class="font-sans bg-white text-slate scroll-smooth">
 
     <!-- Sticky Navigation -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 text-white py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center relative">
-            <div class="text-2xl font-serif font-bold tracking-tight">Park Lane Methodist</div>
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 text-white py-4 md:py-6">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <!-- Logo - Smaller on mobile -->
+            <div class="text-xl md:text-2xl font-serif font-bold tracking-tight z-50">
+                <span class="hidden xs:inline">Park Lane Methodist</span>
+                <span class="xs:hidden">PLMC</span>
+            </div>
             
-            <div class="flex items-center space-x-6">
-                <!-- Expanded Menu (Hidden by default) -->
-                <div id="nav-menu" class="hidden md:flex items-center space-x-8 font-medium uppercase text-xs tracking-widest overflow-hidden transition-all duration-500 max-w-0 opacity-0 whitespace-nowrap">
+            <div class="flex items-center">
+                <!-- Expanded Menu -->
+                <div id="nav-menu" class="hidden flex items-center space-x-4 md:space-x-8 font-medium uppercase text-[10px] md:text-xs tracking-widest overflow-hidden transition-all duration-500 max-w-0 opacity-0 whitespace-nowrap bg-navy/90 md:bg-transparent px-4 py-2 rounded-full md:p-0 mr-2 md:mr-4">
                     <a href="#home" class="hover:text-gold transition">Home</a>
-                    <a href="#reading" class="hover:text-gold transition">Daily Reading</a>
-                    <a href="#welcome" class="hover:text-gold transition">Our Church</a>
+                    <a href="#reading" class="hover:text-gold transition">Reading</a>
+                    <a href="#welcome" class="hover:text-gold transition">Church</a>
                     <a href="#contact" class="hover:text-gold transition">Contact</a>
                 </div>
 
                 <!-- Magnifier Toggle Icon -->
-                <button id="menu-toggle" class="hover:text-gold transition p-2 focus:outline-none">
+                <button id="menu-toggle" class="hover:text-gold transition p-2 focus:outline-none z-50">
                     <svg id="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
@@ -89,22 +97,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex items-center justify-center relative px-6">
-        <div class="glass-card max-w-4xl p-12 md:p-20 rounded-2xl text-center text-white">
-            <h2 class="text-gold uppercase tracking-[0.3em] text-sm font-semibold mb-6">Today's Devotional</h2>
-            <h1 class="text-4xl md:text-6xl font-serif mb-10 leading-tight">Put on the Full Armor</h1>
-            <div class="mb-12">
-                <p class="text-2xl md:text-3xl font-serif leading-relaxed italic opacity-95">
+    <section id="home" class="hero-bg h-screen flex items-center justify-center relative px-4 md:px-6">
+        <div class="max-w-4xl p-6 md:p-20 rounded-2xl text-center text-white">
+            <h2 class="text-gold uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm font-semibold mb-4 md:mb-6">Today's Devotional</h2>
+            <h1 class="text-3xl md:text-6xl font-serif mb-6 md:mb-10 leading-tight">Put on the Full Armor</h1>
+            <div class="mb-8 md:mb-12">
+                <p class="text-xl md:text-3xl font-serif leading-relaxed italic opacity-95 px-2 md:px-0">
                     "Put on the full armor of God, so that you can take your stand against the devil’s schemes."
                 </p>
-                <p class="mt-4 text-gold font-serif text-xl tracking-wide">— Ephesians 6:11</p>
+                <p class="mt-4 text-gold font-serif text-lg md:text-xl tracking-wide">— Ephesians 6:11</p>
             </div>
-            <a href="#reading" class="inline-block bg-gold hover:bg-gold-light text-navy font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl">
-                Read Today's Devotional
+            <a href="#reading" class="inline-block bg-gold hover:bg-gold-light text-navy font-bold py-3 px-8 md:py-4 md:px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl text-sm md:text-base">
+                Read Devotional
             </a>
         </div>
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path></svg>
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" md:width="24" md:height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path></svg>
         </div>
     </section>
 
