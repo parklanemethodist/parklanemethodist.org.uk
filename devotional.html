@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日靈修 | 全副武裝 - Park Lane Methodist Church</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0f172a',
+                        slate: '#334155',
+                        gold: '#d4af37',
+                        'gold-light': '#f3e5ab'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        chinese: ['"Noto Serif TC"', '"Microsoft JhengHei"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1747066814637-230bf30308fb?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .nav-scrolled {
+            background: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            color: #0f172a !important;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-slate">
+
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 text-white py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold tracking-tight">PLMC Devotional</div>
+            <div class="hidden md:flex space-x-8 font-medium uppercase text-xs tracking-widest">
+                <a href="index.html" class="hover:text-gold transition">Home</a>
+                <a href="#" class="hover:text-gold transition">Archive</a>
+                <a href="#" class="hover:text-gold transition">Resources</a>
+                <a href="contact.html" class="hover:text-gold transition">Support</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="hover:text-gold"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                <div class="text-xs border border-white/30 rounded px-2 py-1">EN | 繁</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg h-screen flex items-center justify-center relative px-6">
+        <div class="glass-card max-w-4xl p-12 md:p-20 rounded-2xl text-center text-white">
+            <h2 class="text-gold uppercase tracking-[0.3em] text-sm font-semibold mb-6">Today's Reading</h2>
+            <h1 class="text-4xl md:text-6xl font-serif mb-10 leading-tight">Put on the Full Armor</h1>
+            <div class="mb-12">
+                <p class="text-2xl md:text-3xl font-chinese leading-relaxed italic opacity-95">
+                    「要穿戴神所賜的全副軍裝，就能抵擋魔鬼的詭計。」
+                </p>
+                <p class="mt-4 text-gold font-serif text-xl tracking-wide">— 以弗所書 6:11</p>
+            </div>
+            <a href="#reading" class="inline-block bg-gold hover:bg-gold-light text-navy font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 shadow-xl">
+                Read Today's Devotional
+            </a>
+        </div>
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-60">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"></path></svg>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <main id="reading" class="container mx-auto px-6 py-24">
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <!-- Sidebar -->
+            <aside class="lg:w-1/3 order-2 lg:order-1">
+                <div class="sticky top-32 space-y-12">
+                    <section>
+                        <h3 class="font-serif text-2xl mb-6 border-b border-slate/10 pb-4">Monthly Themes</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#" class="flex justify-between items-center text-gold font-medium"><span>May: Spiritual Warfare</span> <span class="bg-gold/10 text-[10px] px-2 py-1 rounded">Active</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center hover:text-gold transition"><span>April: Resurrection Hope</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center hover:text-gold transition"><span>March: Wilderness Lessons</span></a></li>
+                            <li><a href="#" class="flex justify-between items-center hover:text-gold transition"><span>February: Covenant Love</span></a></li>
+                        </ul>
+                    </section>
+
+                    <section class="bg-navy p-8 rounded-2xl text-white">
+                        <h4 class="text-gold text-xs uppercase tracking-widest mb-4">Subscription</h4>
+                        <p class="text-sm opacity-80 mb-6">Receive daily devotionals directly in your inbox every morning at 6:00 AM.</p>
+                        <form class="flex gap-2">
+                            <input type="email" placeholder="Email address" class="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-sm w-full outline-none focus:border-gold transition">
+                            <button class="bg-gold text-navy px-4 py-2 rounded-lg font-bold text-sm">Join</button>
+                        </form>
+                    </section>
+                </div>
+            </aside>
+
+            <!-- Devotional Content -->
+            <article class="lg:w-2/3 order-1 lg:order-2">
+                <div class="flex justify-between items-center mb-8">
+                    <span class="text-slate/50 font-medium tracking-widest text-xs uppercase">Saturday, May 9, 2026</span>
+                    <div class="flex space-x-4">
+                        <button class="p-2 hover:text-gold transition"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg></button>
+                        <button class="p-2 hover:text-gold transition"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></button>
+                    </div>
+                </div>
+
+                <!-- Audio Player -->
+                <div class="bg-slate/5 rounded-2xl p-6 mb-12 flex items-center gap-6">
+                    <button class="bg-navy text-white p-4 rounded-full hover:bg-gold hover:text-navy transition shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    </button>
+                    <div class="flex-1">
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="font-bold">Listen to Audio Devotional</span>
+                            <span>04:12</span>
+                        </div>
+                        <div class="h-1 bg-slate/10 rounded-full w-full">
+                            <div class="h-full bg-navy rounded-full w-1/3 relative">
+                                <div class="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-gold rounded-full border-2 border-white shadow-md"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-4xl md:text-5xl font-serif text-navy mb-8">The Invisible Battle</h2>
+                
+                <div class="prose prose-lg max-w-none text-slate/90 leading-relaxed space-y-6">
+                    <p class="text-xl font-medium text-navy/80 italic border-l-4 border-gold pl-6 py-2">
+                        "We do not wrestle against flesh and blood, but against principalities, against powers, against the rulers of the darkness of this age..."
+                    </p>
+                    
+                    <p>In our modern world, it's easy to believe that our biggest challenges are purely physical—financial stress, relationship conflicts, or physical health. However, the Apostle Paul reminds us in his letter to the Ephesians that there is a deeper reality at play. We are involved in a spiritual conflict that requires a different kind of preparation.</p>
+                    
+                    <p>The "Armor of God" isn't a metaphor for self-help techniques. It is a description of the character of Christ that we are invited to "put on" daily. Just as a soldier wouldn't dream of entering the battlefield without their protective gear, we are called to be intentional about our spiritual defense.</p>
+                    
+                    <p>Consider the belt of truth. In ancient warfare, the belt held everything together. Without truth—the fundamental reality of who God is and who we are in Him—our spiritual defenses begin to crumble. When we ground ourselves in God's truth, we find the stability needed to stand firm against the "schemes" or "craftiness" of the enemy.</p>
+
+                    <h3 class="text-2xl font-serif text-navy mt-12 mb-4">Questions for Reflection</h3>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li>Which piece of spiritual armor do you feel most "unprotected" in today?</li>
+                        <li>How does knowing the battle is "not against flesh and blood" change your perspective on a current conflict?</li>
+                        <li>What specific truth from Scripture can you use as a "belt" to hold your faith together this week?</li>
+                    </ul>
+                </div>
+
+                <div class="mt-20 pt-12 border-t border-slate/10 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop" alt="Grace" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest opacity-50">Written by</p>
+                            <p class="font-bold">Minister Grace</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-sm font-bold text-navy hover:text-gold transition">← Previous Day</a>
+                        <span class="text-slate/20">|</span>
+                        <a href="#" class="text-sm font-bold text-navy hover:text-gold transition">Next Day →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <h2 class="text-2xl font-serif mb-6">Wembley Park Lane Methodist Church</h2>
+                    <p class="opacity-60 max-w-sm">Nurturing faith, serving the community, and providing a space for spiritual growth in the heart of Wembley since 2026.</p>
+                </div>
+                <div>
+                    <h3 class="text-gold text-xs uppercase tracking-widest mb-6 font-bold">Connect</h3>
+                    <ul class="space-y-4 text-sm opacity-80">
+                        <li><a href="index.html" class="hover:text-gold">Home</a></li>
+                        <li><a href="about.html" class="hover:text-gold">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-gold">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-gold text-xs uppercase tracking-widest mb-6 font-bold">Location</h3>
+                    <p class="text-sm opacity-80">Park Lane, Wembley<br>Middlesex, HA9 7SG</p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs opacity-40">
+                &copy; 2026 Park Lane Methodist Church. All spiritual rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('py-6');
+                navbar.classList.add('py-4');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('py-6');
+                navbar.classList.remove('py-4');
+            }
+        });
+    </script>
+</body>
+</html>
