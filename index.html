@@ -65,16 +65,25 @@
 
     <!-- Sticky Navigation -->
     <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 text-white py-6">
-        <div class="container mx-auto px-6 flex justify-between items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center relative">
             <div class="text-2xl font-serif font-bold tracking-tight">Park Lane Methodist</div>
-            <div class="hidden md:flex space-x-8 font-medium uppercase text-xs tracking-widest">
-                <a href="#home" class="hover:text-gold transition">Home</a>
-                <a href="#reading" class="hover:text-gold transition">Daily Reading</a>
-                <a href="#welcome" class="hover:text-gold transition">Our Church</a>
-                <a href="#contact" class="hover:text-gold transition">Contact</a>
-            </div>
-            <div class="flex items-center space-x-4">
-                <button class="hover:text-gold"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+            
+            <div class="flex items-center space-x-6">
+                <!-- Expanded Menu (Hidden by default) -->
+                <div id="nav-menu" class="hidden md:flex items-center space-x-8 font-medium uppercase text-xs tracking-widest overflow-hidden transition-all duration-500 max-w-0 opacity-0 whitespace-nowrap">
+                    <a href="#home" class="hover:text-gold transition">Home</a>
+                    <a href="#reading" class="hover:text-gold transition">Daily Reading</a>
+                    <a href="#welcome" class="hover:text-gold transition">Our Church</a>
+                    <a href="#contact" class="hover:text-gold transition">Contact</a>
+                </div>
+
+                <!-- Magnifier Toggle Icon -->
+                <button id="menu-toggle" class="hover:text-gold transition p-2 focus:outline-none">
+                    <svg id="toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
             </div>
         </div>
     </nav>
@@ -241,6 +250,30 @@
             } else {
                 navbar.classList.remove('nav-scrolled');
                 navbar.classList.add('py-6'); navbar.classList.remove('py-4');
+            }
+        });
+
+        // Menu Toggle Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        let isExpanded = false;
+
+        menuToggle.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                navMenu.classList.remove('hidden');
+                // Use a small timeout to allow display:flex to register before animating
+                setTimeout(() => {
+                    navMenu.classList.remove('max-w-0', 'opacity-0');
+                    navMenu.classList.add('max-w-xl', 'opacity-100');
+                }, 10);
+            } else {
+                navMenu.classList.remove('max-w-xl', 'opacity-100');
+                navMenu.classList.add('max-w-0', 'opacity-0');
+                // Hide after transition ends
+                setTimeout(() => {
+                    if (!isExpanded) navMenu.classList.add('hidden');
+                }, 500);
             }
         });
     </script>
