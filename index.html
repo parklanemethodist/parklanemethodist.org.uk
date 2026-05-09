@@ -46,7 +46,16 @@
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1747066814637-230bf30308fb?q=80&w=2000&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            /* Remove background-attachment: fixed as it distorts on mobile */
+        }
+        @media (min-width: 1024px) {
+            .hero-bg {
+                background-attachment: fixed; /* Re-enable for desktop only */
+            }
+        }
+        .h-screen-dvh {
+            height: 100vh;
+            height: 100dvh;
         }
         .nav-scrolled {
             background: white !important;
@@ -97,7 +106,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-bg h-screen flex items-center justify-center relative px-4 md:px-6">
+    <section id="home" class="hero-bg h-screen-dvh flex items-center justify-center relative px-4 md:px-6">
         <div class="max-w-4xl p-6 md:p-20 rounded-2xl text-center text-white">
             <h2 class="text-gold uppercase tracking-[0.2em] md:tracking-[0.3em] text-xs md:text-sm font-semibold mb-4 md:mb-6">Today's Devotional</h2>
             <h1 class="text-3xl md:text-6xl font-serif mb-6 md:mb-10 leading-tight">Put on the Full Armor</h1>
