@@ -1,3 +1,12 @@
+export async function onRequest(context) {
+  if (context.request.method === 'GET') {
+    return new Response('Submit function is active and waiting for POST requests.', {
+      headers: { 'content-type': 'text/plain' },
+    });
+  }
+  return onRequestPost(context);
+}
+
 export async function onRequestPost(context) {
   try {
     const data = await context.request.formData();
