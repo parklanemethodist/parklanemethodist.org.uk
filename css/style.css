@@ -106,7 +106,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('../images/hero-bg.jpg');
+    background: var(--primary) url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: var(--white);
