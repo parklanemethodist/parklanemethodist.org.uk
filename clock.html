@@ -23,7 +23,7 @@
 			align-items: center;
 		}
 		div#clocktext {
-			font-size: 25vw;
+			font-size: 35vw; /* Slightly larger text since there are fewer numbers */
 			line-height: 1;
 			text-align: center;
 			cursor: default;
@@ -45,13 +45,12 @@
 			let d = new Date();
 			let h = d.getHours();
 			let m = d.getMinutes();
-			let s = d.getSeconds();
 			
 			let hStr = (h < 10 ? "0" : "") + h;
 			let mStr = (m < 10 ? "0" : "") + m;
-			let sStr = (s < 10 ? "0" : "") + s;
 			
-			textElem.textContent = hStr + ":" + mStr + ":" + sStr;
+			// Only displaying hours and minutes now
+			textElem.textContent = hStr + ":" + mStr;
 		}
 
 		updateClock();
