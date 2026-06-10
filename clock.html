@@ -1,71 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-    span.Apple-tab-span {white-space:pre}
-  </style>
+	<meta charset="UTF-8">
+	<title>Clock</title>
+	<style>
+		html {
+			background: #000000;
+			font-family: sans-serif;
+			font-weight: bold;
+			color: #FFFFFF;
+		}
+		html, body {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		div#clocktext {
+			font-size: 25vw;
+			line-height: 1;
+			text-align: center;
+			cursor: default;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+	</style>
 </head>
 <body>
-<p class="p1">&lt;!--</p>
-<p class="p1"><span class="Apple-converted-space">  </span>- Full screen clock (24-hour)</p>
-<p class="p1"><span class="Apple-converted-space">  </span>- Copyright (c) 2022 Project Nayuki. All rights reserved.</p>
-<p class="p1"><span class="Apple-converted-space">  </span>-<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">  </span>- https://www.nayuki.io/page/full-screen-clock-javascript</p>
-<p class="p1"><span class="Apple-converted-space">  </span>--&gt;</p>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html style="height:100%; margin:0; padding:0"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;head&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;title&gt;Clock&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;style type="text/css"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>/* Customizable font and colors */</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>html {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>background: #000000;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-family: sans-serif;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>font-weight: bold;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>color: #FFFFFF;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/style&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/head&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;body style="display:flex; height:100%; margin:0; padding:0; justify-content:center; align-items:center"&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;span id="clocktext" style="font-kerning:none"&gt;&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>"use strict";</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>let textElem = document.getElementById("clocktext");</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>const targetWidth = 0.9;<span class="Apple-converted-space">  </span>// Proportion of full screen width</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>let curFontSize = 20;<span class="Apple-converted-space">  </span>// Do not change</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>function updateClock() {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>const d = new Date();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>let s = "";</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>s += (10 &gt; d.getHours<span class="Apple-converted-space">  </span>() ? "0" : "") + d.getHours<span class="Apple-converted-space">  </span>() + ":";</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>s += (10 &gt; d.getMinutes() ? "0" : "") + d.getMinutes();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>textElem.textContent = s;</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>setTimeout(updateClock, 60000 - d.getTime() % 60000 + 100);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>function updateTextSize() {</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>for (let i = 0; 3 &gt; i; i++) {<span class="Apple-converted-space">  </span>// Iterate for better better convergence</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>curFontSize *= targetWidth / (textElem.offsetWidth / textElem.parentNode.offsetWidth);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>textElem.style.fontSize = curFontSize + "pt";</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>}</p>
-<p class="p2"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span></p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>updateClock();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>updateTextSize();</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>window.addEventListener("resize", updateTextSize);</p>
-<p class="p1"><span class="Apple-tab-span">	</span><span class="Apple-tab-span">	</span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-tab-span">	</span>&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+	<div id="clocktext"></div>
+
+	<script>
+		"use strict";
+
+		let textElem = document.getElementById("clocktext");
+
+		function updateClock() {
+			let d = new Date();
+			let h = d.getHours();
+			let m = d.getMinutes();
+			let s = d.getSeconds();
+			
+			let hStr = (h < 10 ? "0" : "") + h;
+			let mStr = (m < 10 ? "0" : "") + m;
+			let sStr = (s < 10 ? "0" : "") + s;
+			
+			textElem.textContent = hStr + ":" + mStr + ":" + sStr;
+		}
+
+		updateClock();
+		setInterval(updateClock, 1000);
+	</script>
 </body>
 </html>
